@@ -29,6 +29,6 @@ node{
     stage('Build') {
            
                 echo 'building...'
-            
+                sh 'maven test'
         }
 }
