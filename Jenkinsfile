@@ -46,4 +46,8 @@ node{
             }
                 
     }
+    stage('Copy Files'){
+        fileOperations([fileCopyOperation(includes: '**/*.jar', targetLocation: '/home/ivan/dist')])
+        deleteDir
+    }
 }
