@@ -25,7 +25,7 @@ pipeline {
 }
 */
 node{
-    /*checkout scm*/
+    checkout scm
     stage('Build') {
            
                 echo 'building...'
