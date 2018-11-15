@@ -1,7 +1,7 @@
-/* sintaxis declarativa */
+/* sintaxis declarativa 
 pipeline {
     agent any
-    /*checkout scm*/
+    
     stages {
         stage('Build') {
             steps{
@@ -22,4 +22,13 @@ pipeline {
         }
     }
     
+}
+*/
+node{
+    /*checkout scm*/
+    stage('Build') {
+           
+                echo 'building...'
+            
+        }
 }
