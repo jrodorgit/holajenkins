@@ -52,6 +52,6 @@ node{
     }
     stage('Delete Workspace'){
         
-        deleteDir
+        (deleteDir)
     }
 }
