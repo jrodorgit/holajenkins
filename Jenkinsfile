@@ -29,8 +29,9 @@ node{
     checkout scm
     
     stage('Build') {
+        withMaven(maven:'Maven Test'){
            sh 'mvn clean compile'
-                
+        }
     }
     stage('Test') {
            sh 'mvn test'
