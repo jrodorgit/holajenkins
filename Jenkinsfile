@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 /* sintaxis declarativa 
 pipeline {
     agent any
