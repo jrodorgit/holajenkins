@@ -2,9 +2,6 @@
 pipeline {
     agent any
     checkout scm
-    tools{
-        maven 'Maven Test'
-    }
     stages {
         stage('Build') {
             steps{
