@@ -41,7 +41,9 @@ node{
                 
     }
     stage('Deploy') {
-           sh 'mvn package'
+            withMaven(maven:'Maven Test'){
+                sh 'mvn package'
+            }
                 
     }
 }
