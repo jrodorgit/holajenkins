@@ -28,15 +28,15 @@ node{
     checkout scm
     
     stage('Build') {
-           
-                echo 'building...'
-                withMaven(
-                    // Maven installation declared in the Jenkins "Global Tool Configuration"
-                    maven: 'Maven Test'
-                ) {
- 
-                    // Run the maven build
-                    sh "mvn clean test"
-                }
+           sh 'mvn clean compile'
+                
+    }
+    stage('Test') {
+           sh 'mvn test'
+                
+    }
+    stage('Deploy') {
+           sh 'mvn package'
+                
     }
 }
