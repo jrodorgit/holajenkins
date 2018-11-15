@@ -33,9 +33,10 @@ node{
                 withMaven(
                     // Maven installation declared in the Jenkins "Global Tool Configuration"
                     maven: 'Maven Test'
-                ) 
+                ) {
  
-                // Run the maven build
-                sh "mvn clean test"
+                    // Run the maven build
+                    sh "mvn clean test"
+                }
     }
 }
