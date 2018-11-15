@@ -60,4 +60,7 @@ echo ("Env: "+userInput)
         
         deleteDir()
     }
+    stage('end'){
+        echo (userInput)
+    }
 }
