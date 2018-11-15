@@ -26,12 +26,16 @@ pipeline {
 */
 node{
     checkout scm
-    tools{
-        maven 'Maven Test'
-    }
+    
     stage('Build') {
            
                 echo 'building...'
-                sh 'maven test'
-        }
+                withMaven(
+                    // Maven installation declared in the Jenkins "Global Tool Configuration"
+                    maven: 'Maven Test'
+                ) 
+ 
+                // Run the maven build
+                sh "mvn clean test"
+    }
 }
