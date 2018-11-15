@@ -27,12 +27,14 @@ pipeline {
 */
 node{
     checkout scm
+    def pp
     stage('init'){
         def userInput = input(
             id: 'userInput', message: 'Let\'s promote?', parameters: [
             [$class: 'TextParameterDefinition', defaultValue: 'uat', description: 'Environment', name: 'env']
         ])
 echo ("Env: "+userInput)
+        pp='fin'
     }
     stage('Build') {
         withMaven(maven:'Maven Test'){
@@ -61,6 +63,6 @@ echo ("Env: "+userInput)
         deleteDir()
     }
     stage('end'){
-        echo (userInput)
+        echo (pp)
     }
 }
