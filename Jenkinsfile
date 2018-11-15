@@ -26,6 +26,9 @@ pipeline {
 */
 node{
     checkout scm
+    tools{
+        maven 'Maven Test'
+    }
     stage('Build') {
            
                 echo 'building...'
