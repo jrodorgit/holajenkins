@@ -1,7 +1,7 @@
 /* sintaxis declarativa */
 pipeline {
     agent any
-    checkout scm
+    /*checkout scm*/
     stages {
         stage('Build') {
             steps{
