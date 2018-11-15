@@ -1,6 +1,7 @@
 /* sintaxis declarativa */
 pipeline {
-    agent any 
+    agent any
+    checkout scm
     tools{
         maven 'Maven Test'
     }
