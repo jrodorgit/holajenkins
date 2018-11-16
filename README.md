@@ -19,6 +19,11 @@ se instala en /var/lib/jenkins
 
 cambio de permisos chmod 777 filename
 
+instalacion de tomcat 
+sudo apt-get install tomcat8
+sudo apt-get install tomcat8-admin
+
+
 --- Algunos plugin imprescindibles... ---
 
 Ocean Blue para un look and feel distinto.
@@ -33,6 +38,22 @@ junit para visualizacion de resultados de test JUnit
 
 conditional step para poder ejecutar acciones condicionadas.
 
-flexible publish
+flexible publish ejecucion de acciones como post acciones.
+
+file operations para operaciones con ficheros y directorios
+
+deploy to container para desplegar war en tomat y similares
+
+junit attachement ... no se para que especificamente
+
+pipeline maven ... no se para que especificamente
+
+hudson post build task ... no se para que especificamente
+
+localhost:8080/pipeline-syntax ... ayuda a generacion de script jenkins.
+
+
+
+
 
 
