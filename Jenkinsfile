@@ -78,7 +78,7 @@ node('master'){
         echo 'Se ejecuta si fallo'
         throw e
     } finally {
-        echo currentBuild.currentResult
+        echo currentBuild.result
        
         echo 'Se ejecuta siempre'
     }
