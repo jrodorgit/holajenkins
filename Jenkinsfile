@@ -68,7 +68,7 @@ echo ("Env: "+userInput)
     }
 }
 ***/
-node {
+node('Window Worker'){
     try {
         stage('Test') {
             sh 'echo "Fallo!"; exit 0'
