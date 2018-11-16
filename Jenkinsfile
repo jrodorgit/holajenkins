@@ -68,7 +68,7 @@ echo ("Env: "+userInput)
     }
 }
 ***/
-node('principal'){
+node('master'){
     try {
         stage('Test') {
             sh 'echo "Fallo!"; exit 0'
