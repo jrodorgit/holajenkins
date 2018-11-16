@@ -79,7 +79,7 @@ node {
         throw e
     } finally {
         
-        def currentResult = currentBuild?.result
+        def currentResult = currentBuild
         if (currentResult == 'FAILURE') {
             echo 'Se ejecuta si FAILURE'
         }
