@@ -78,7 +78,7 @@ node('master'){
         echo 'Se ejecuta si fallo'
         throw e
     } finally {
-        emailext body: 'jenkinss....', subject: 'subject', to: 'jrodor@gmail.com'
+        emailext body: 'jenkinss....', subject: 'subject', to: 'jarodriguez@indra.es'
         echo 'Se ejecuta siempre'
     }
 }
