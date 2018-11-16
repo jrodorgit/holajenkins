@@ -78,8 +78,7 @@ node('master'){
         echo 'Se ejecuta si fallo'
         throw e
     } finally {
-        mail bcc: '', body: 'es un mensaje de jenkins', cc: '', from: 'noreply@gmail.com', replyTo: '', subject: 'esto es el subject', to: 'jrodor@gmail.com'
-       
+        emailext body: 'jenkinss....', subject: 'subject', to: 'jrodor@gmail.com'
         echo 'Se ejecuta siempre'
     }
 }
