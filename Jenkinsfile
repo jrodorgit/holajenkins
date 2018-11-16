@@ -78,6 +78,8 @@ node {
         echo 'Se ejecuta si fallo'
         throw e
     } finally {
+        echo 'currentResult:' currentResult
+        echo 'previousResult:' previousResult
         def currentResult = currentBuild.result ?: 'SUCCESS'
         if (currentResult == 'UNSTABLE') {
             echo 'Se ejecuta si unstable'
