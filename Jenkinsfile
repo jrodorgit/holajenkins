@@ -71,14 +71,14 @@ echo ("Env: "+userInput)
 node('master'){
     try {
         stage('Test') {
-            sh 'echo "Fallo!"; exit 0'
+            sh 'echo "Hola Test!"'
         }
-        echo 'Se ejecuta si exito'
+        echo 'Se ejecuta si exito...'
     } catch (e) {
-        echo 'Se ejecuta si fallo'
+        echo 'Se ejecuta si fallo...'
         throw e
     } finally {
-        emailext body: 'jenkinss....', subject: 'subject', to: 'jarodriguez@indra.es'
+        
         echo 'Se ejecuta siempre'
     }
 }
