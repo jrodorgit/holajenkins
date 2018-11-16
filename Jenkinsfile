@@ -78,7 +78,7 @@ node('master'){
         echo 'Se ejecuta si fallo'
         throw e
     } finally {
-        echo currentBuild.result
+        mail bcc: '', body: 'es un mensaje de jenkins', cc: '', from: 'noreply@gmail.com', replyTo: '', subject: 'esto es el subject', to: 'jrodor@gmail.com'
        
         echo 'Se ejecuta siempre'
     }
