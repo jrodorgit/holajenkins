@@ -88,8 +88,8 @@ node {
         if (previousResult != null && previousResult != currentResult) {
             echo 'Se ejecuta si hay cambio de estado'
         }
-        echo 'currentResult:' currentResult
-        echo 'previousResult:' previousResult
+        echo  currentResult
+        echo previousResult
         echo 'Se ejecuta siempre'
     }
 }
