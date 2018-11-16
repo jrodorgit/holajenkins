@@ -78,8 +78,7 @@ node {
         echo 'Se ejecuta si fallo'
         throw e
     } finally {
-        echo 'currentResult:' currentResult
-        echo 'previousResult:' previousResult
+        
         def currentResult = currentBuild.result ?: 'SUCCESS'
         if (currentResult == 'UNSTABLE') {
             echo 'Se ejecuta si unstable'
@@ -89,7 +88,8 @@ node {
         if (previousResult != null && previousResult != currentResult) {
             echo 'Se ejecuta si hay cambio de estado'
         }
-
+        echo 'currentResult:' currentResult
+        echo 'previousResult:' previousResult
         echo 'Se ejecuta siempre'
     }
 }
