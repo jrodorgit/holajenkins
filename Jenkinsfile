@@ -71,7 +71,7 @@ echo ("Env: "+userInput)
 node('master'){
     try {
         stage('Test') {
-            sh 'echo "Fallo!"; exit 0'
+            sh 'echo "Fallo!"; exit 1'
         }
         echo 'Se ejecuta si exito'
     } catch (e) {
