@@ -79,18 +79,7 @@ node {
         throw e
     } finally {
         
-        def currentResult = currentBuild
-        if (currentResult == 'FAILURE') {
-            echo 'Se ejecuta si FAILURE'
-        }
-        echo  currentResult
-        
-        def previousResult = currentBuild.previousBuild?.result
-        if (previousResult != null && previousResult != currentResult) {
-            echo 'Se ejecuta si hay cambio de estado'
-        }
        
-        echo previousResult
         echo 'Se ejecuta siempre'
     }
 }
